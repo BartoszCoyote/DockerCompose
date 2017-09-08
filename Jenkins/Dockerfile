@@ -1,0 +1,9 @@
+FROM jenkins:latest
+
+COPY plugins.txt /usr/share/jenkins/plugins.txt
+
+RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
+
+RUN RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
+
+USER root
